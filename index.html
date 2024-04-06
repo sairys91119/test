@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Centered Images</title>
+<title>Centered Images with Button</title>
 <style>
     body {
         background-color: white;
@@ -13,6 +13,7 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
+        position: relative; /* Position relative to enable absolute positioning of elements */
     }
     .container {
         position: relative;
@@ -28,12 +29,29 @@
         top: calc(50% - 250px - 50px); /* 250px for first image, 200px for distance */
         left: calc(50% - 175px); /* Half of 350px for second image width */
     }
+    .button {
+        position: absolute;
+        top: calc(50% + 200px); /* 250px below the center of the page */
+        left: calc(50% - 50px); /* Half of 100px for button width */
+        width: 100px;
+        height: 50px;
+        background-color: #ff0000;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 </style>
 </head>
 <body>
     <div class="container">
         <img src="image\Без имени-2 копия.png" alt="Second Image" class="second-image">
         <img src="image\1673963273_flomaster-club-p-risunok-sobaki-chikhuakhua-pinterest-12.jpg" alt="Sample Image" class="first-image">
+        <button class="button">Click Me</button>
     </div>
 </body>
 </html>
