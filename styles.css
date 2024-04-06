@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background-image: url('image/фон.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    position: relative;
+}
+
+.first-image {
+    width: 250px;
+    height: 250px;
+    display: block;
+    margin: auto;
+}
+
+.second-image {
+    position: absolute;
+    top: calc(50% - 250px - 50px);
+    left: calc(50% - 255px);
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.button {
+    position: absolute;
+    top: calc(50% + 230px);
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 50px;
+    background-color: #c56900;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.message {
+    position: absolute;
+    top: calc(50% + 230px);
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 50px;
+    background-color: #c56900;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 5px;
+    display: none;
+}
+
+.inscription {
+    position: absolute;
+    top: calc(50% + 150px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    line-height: 30px;
+    white-space: nowrap;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 20px;
+}

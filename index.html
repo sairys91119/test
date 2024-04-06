@@ -4,87 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Centered Images with Button</title>
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        position: relative; /* Position relative to enable absolute positioning of elements */
-        background-image: url('image/фон.jpg'); /* URL of the background image */
-        background-size: cover; /* Cover the entire viewport */
-        background-position: center; /* Center the background image */
-    }
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    }
-    .container {
-        position: relative;
-    }
-    .first-image {
-        width: 250px;
-        height: 250px;
-        display: block;
-        margin: auto;
-    }
-    .second-image {
-        position: absolute;
-        top: calc(50% - 250px - 50px); /* 250px for first image, 200px for distance */
-        left: calc(50% - 255px); /* Half of 350px for second image width */
-        border-radius: 20px; /* Rounded corners */
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0.5); /* Opaque black background */
-    }
-    .button {
-        position: absolute;
-        top: calc(50% + 230px); /* 250px below the center of the page */
-        left: calc(50% - 50px); /* Half of 100px for button width */
-        width: 100px;
-        height: 50px;
-        background-color: #c56900;
-        border: none;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    .message {
-        position: absolute;
-        top: calc(50% + 230px); /* 250px below the center of the page */
-        left: calc(50% - 50px); /* Half of 100px for button width */
-        width: 100px;
-        height: 50px;
-        background-color: #c56900;
-        color: white;
-        text-align: center;
-        line-height: 50px;
-        border-radius: 5px; /* Rounded corners */
-        display: none; /* Initially hidden */
-    }
-    .inscription {
-        position: absolute;
-        top: calc(50% + 150px); /* 150px below the center of the page */
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 20px;
-        line-height: 30px; /* Fixed line height */
-        white-space: nowrap; /* Prevent line breaks */
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0.5); /* Opaque black background */
-        color: white;
-        border-radius: 20px; /* Rounded corners */
-    }
-</style>
+<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <div class="overlay"></div>
@@ -95,22 +15,7 @@
         <div class="message" id="successMessage">Successfully</div>
         <div class="inscription" id="counter">BonyaCoin: 0.00</div>
     </div>
-
-    <script>
-        var counterValue = 0.00;
-
-        function showMessage() {
-            var message = document.getElementById("successMessage");
-            message.style.display = "block";
-            var button = document.querySelector(".button");
-            button.innerHTML = ""; // Clear button label
-            counterValue += 0.01; // Increment counter by 0.01
-            document.getElementById("counter").innerHTML = "BonyaCoin: " + counterValue.toFixed(2);
-            setTimeout(function() {
-                message.style.display = "none";
-                button.innerHTML = "Claim"; // Restore button label
-            }, 3000); // Hide message after 3 seconds
-        }
-    </script>
+<script src="script.js"></script>
 </body>
 </html>
+
