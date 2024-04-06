@@ -35,7 +35,7 @@
         left: calc(50% - 50px); /* Half of 100px for button width */
         width: 100px;
         height: 50px;
-        background-color: #ff0000;
+        background-color: #4CAF50;
         border: none;
         color: white;
         text-align: center;
@@ -45,13 +45,40 @@
         border-radius: 5px;
         cursor: pointer;
     }
+    .message {
+        position: absolute;
+        top: calc(50% + 200px); /* 200px below the center of the page */
+        left: calc(50% - 100px); /* Half of 200px for message width */
+        width: 200px;
+        height: 50px;
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 25px; /* Rounded corners */
+        display: none; /* Initially hidden */
+    }
 </style>
 </head>
 <body>
     <div class="container">
-        <img src="image\Без имени-2 копия.png" alt="Second Image" class="second-image">
         <img src="image\1673963273_flomaster-club-p-risunok-sobaki-chikhuakhua-pinterest-12.jpg" alt="Sample Image" class="first-image">
-        <button class="button">Click Me</button>
+        <img src="image\Без имени-2 копия.png" alt="Second Image" class="second-image">
+        <button class="button" onclick="showMessage()">Claim</button>
+        <div class="message" id="successMessage">Successfully</div>
     </div>
+
+    <script>
+        function showMessage() {
+            var message = document.getElementById("successMessage");
+            message.style.display = "block";
+            var button = document.querySelector(".button");
+            button.innerHTML = ""; // Clear button label
+            setTimeout(function() {
+                message.style.display = "none";
+                button.innerHTML = "Claim"; // Restore button label
+            }, 3000); // Hide message after 5 seconds
+        }
+    </script>
 </body>
 </html>
