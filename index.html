@@ -13,18 +13,27 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
-        position: relative; /* Position relative to enable absolute positioning of elements */
     }
-    img {
+    .container {
+        position: relative;
+    }
+    .first-image {
         width: 250px;
         height: 250px;
+        display: block;
+        margin: auto;
+    }
+    .second-image {
         position: absolute;
-        top: calc(50% - 200px); /* Position 200 pixels above the center */
+        top: calc(50% - 250px - 200px); /* 250px for first image, 200px for distance */
+        left: calc(50% - 175px); /* Half of 350px for second image width */
     }
 </style>
 </head>
 <body>
-    <img src="second_image.jpg" alt="Second Image">
-    <img src="image.jpg" alt="Sample Image">
+    <div class="container">
+        <img src="image\Без имени-2 копия.png" alt="Second Image" class="second-image">
+        <img src="image\1673963273_flomaster-club-p-risunok-sobaki-chikhuakhua-pinterest-12.jpg" alt="Sample Image" class="first-image">
+    </div>
 </body>
 </html>
