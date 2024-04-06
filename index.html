@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Centered Image</title>
+<title>Centered Images</title>
 <style>
     body {
         background-color: white;
@@ -13,14 +13,18 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
+        position: relative; /* Position relative to enable absolute positioning of elements */
     }
     img {
         width: 250px;
         height: 250px;
+        position: absolute;
+        top: calc(50% - 200px); /* Position 200 pixels above the center */
     }
 </style>
 </head>
 <body>
-    <img src="image\1673963273_flomaster-club-p-risunok-sobaki-chikhuakhua-pinterest-12.jpg" alt="Sample Image">
+    <img src="second_image.jpg" alt="Second Image">
+    <img src="image.jpg" alt="Sample Image">
 </body>
 </html>
