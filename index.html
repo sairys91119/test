@@ -37,11 +37,14 @@
     .second-image {
         position: absolute;
         top: calc(50% - 250px - 50px); /* 250px for first image, 200px for distance */
-        left: calc(50% - 250px); /* Half of 350px for second image width */
+        left: calc(50% - 240px); /* Half of 350px for second image width */
+        border-radius: 20px; /* Rounded corners */
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.5); /* Opaque black background */
     }
     .button {
         position: absolute;
-        top: calc(50% + 235px); /* 250px below the center of the page */
+        top: calc(50% + 250px); /* 250px below the center of the page */
         left: calc(50% - 50px); /* Half of 100px for button width */
         width: 100px;
         height: 50px;
@@ -57,15 +60,15 @@
     }
     .message {
         position: absolute;
-        top: calc(50% + 235px); /* 200px below the center of the page */
-        left: calc(50% - 100px); /* Half of 200px for message width */
-        width: 200px;
+        top: calc(50% + 250px); /* 250px below the center of the page */
+        left: calc(50% - 50px); /* Half of 100px for button width */
+        width: 100px;
         height: 50px;
         background-color: #c56900;
         color: white;
         text-align: center;
         line-height: 50px;
-        border-radius: 25px; /* Rounded corners */
+        border-radius: 5px; /* Rounded corners */
         display: none; /* Initially hidden */
     }
     .inscription {
@@ -106,7 +109,7 @@
             setTimeout(function() {
                 message.style.display = "none";
                 button.innerHTML = "Claim"; // Restore button label
-            }, 5000); // Hide message after 5 seconds
+            }, 3000); // Hide message after 3 seconds
         }
     </script>
 </body>
