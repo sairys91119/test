@@ -4,59 +4,44 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Centered Image with Button</title>
+<link rel="stylesheet" type="text/css" href="https://fonts-online.ru/fonts/zametka-parletter/stylesheet.css">
 <style>
     body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+        background-color: white; /* Set page background to white */
         margin: 0;
-        background: linear-gradient(to bottom, #000000, #0e0e0e); /* Dark background gradient */
-        overflow: hidden; /* Hide overflow to prevent scrollbars */
-    }
-    .stars {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: url('https://www.transparenttextures.com/patterns/starfield.png'); /* Background image with stars */
-        z-index: -1; /* Move the stars behind other content */
+        padding: 0;
     }
     .container {
         text-align: center;
-        position: relative; /* Make the container relative to position stars */
+        position: relative;
+        margin-top: 200px; /* Distance of 200 pixels from the top */
     }
     img {
-        width: 80%; /* Adjust image width for mobile devices */
-        max-width: 350px; /* Set max-width to ensure image doesn't exceed container width */
-        height: auto; /* Maintain aspect ratio */
+        width: 80%;
+        max-width: 350px;
+        height: auto;
     }
-    button {
-        margin-top: 20px;
-        margin-left: 20%; /* Adjust the left margin for mobile devices */
-        background-color: blue;
-        color: white;
-        padding: 10px 20px;
-        font-size: 16px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    @media only screen and (max-width: 600px) {
-        button {
-            margin-left: 30%; /* Adjust button position for smaller screens */
-        }
+    .inscription {
+        font-family: 'Zametka ParLetter', sans-serif; /* Use the specified font */
+        font-size: 24px;
+        color: black;
+        position: absolute;
+        top: -50px; /* Position above the image */
+        left: 50%;
+        transform: translateX(-50%);
+        text-transform: uppercase;
+        text-shadow: -1px -1px 0 #000,  
+                     1px -1px 0 #000,
+                    -1px  1px 0 #000,
+                     1px  1px 0 #000; /* Add black outline */
     }
 </style>
 </head>
 <body>
-    <div class="stars"></div>
     <div class="container">
-        <img src="image\i.webp" alt="Sample Image">
-        <br>
-        <button onclick="window.location.href='https://www.youtube.com'" style="margin-left: 30%;">Go to YouTube</button>
+        <div class="inscription">BONYA</div>
+        <img src="image\1673963273_flomaster-club-p-risunok-sobaki-chikhuakhua-pinterest-12.jpg" alt="Sample Image">
+        <div class="inscription" style="top: 50px;">DOGS</div>
     </div>
 </body>
 </html>
