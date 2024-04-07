@@ -13,7 +13,7 @@
   width: 300px; /* Set a fixed width for the progress bar container */
   height: 20px;
   background-color: #f2f2f2;
-  border-radius: 5px;
+  border-radius: 0px;
   position: relative;
 }
 
@@ -21,7 +21,7 @@
 .filler {
   height: 100%;
   background-color: #ff6347;
-  border-radius: 5px;
+  border-radius: 0px;
   transition: width 1s ease-in-out;
 }
 
