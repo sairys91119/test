@@ -28,7 +28,6 @@ body {
     left: calc(50% - 255px);
     border-radius: 20px;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .button {
