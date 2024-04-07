@@ -1,3 +1,11 @@
+.page-container {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    margin: auto;
+    position: relative;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -25,43 +33,40 @@ body {
 }
 
 .first-image {
-    width: 250px;
-    height: 250px;
+    max-width: 100%;
+    height: auto;
     display: block;
     margin: auto;
 }
 
 .second-image {
-    position: absolute;
-    top: calc(50% - 250px - 50px);
-    left: calc(50% - 255px);
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
     border-radius: 20px;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 .button {
-    position: absolute;
-    top: calc(50% + 230px);
-    left: calc(50% - 50px);
-    width: 100px;
+    width: 100%;
+    max-width: 200px;
     height: 50px;
     background-color: #c56900;
     border: none;
     color: white;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: block;
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
+    margin: 20px auto;
 }
 
 .message {
-    position: absolute;
-    top: calc(50% + 230px);
-    left: calc(50% - 50px);
-    width: 100px;
+    width: 100%;
+    max-width: 200px;
     height: 50px;
     background-color: #c56900;
     color: white;
@@ -69,27 +74,32 @@ body {
     line-height: 50px;
     border-radius: 5px;
     display: none;
+    margin: 20px auto;
 }
 
 .inscription {
-    position: absolute;
-    top: calc(50% + 150px);
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 20px;
-    line-height: 30px;
+    width: 100%;
+    max-width: 200px;
+    font-size: 16px;
+    line-height: 24px;
     white-space: nowrap;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border-radius: 20px;
+    text-align: center;
+    margin: 20px auto;
 }
 
 /* Media query for smaller screens */
 @media only screen and (max-width: 480px) {
-    .page-container {
-        max-width: 100%;
-        max-height: 100%;
-        overflow: auto;
+    .second-image {
+        margin-top: 10px;
+    }
+
+    .button,
+    .message,
+    .inscription {
+        max-width: 150px;
     }
 }
