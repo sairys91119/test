@@ -1,105 +1,65 @@
-.page-container {
-    max-width: 100%;
-    max-height: 100%;
-    overflow: auto;
-    margin: auto;
-    position: relative;
-}
-
-body {
-    margin: 0;
-    padding: 0;
+/* Style for the container to center content vertically */
+.container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh; /* Set height of container to full viewport height */
+  }
+  
+  /* Style for the progress bar container */
+  .progress-bar-container {
+    width: 300px; /* Set a fixed width for the progress bar container */
+    height: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
     position: relative;
-    background-image: url('image/фон.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+  }
+  
+  /* Style for the progress bar filler */
+  .filler {
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.container {
-    position: relative;
-}
-
-.first-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: auto;
-}
-
-.second-image {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 20px;
+    background-color: #ff6347;
+    border-radius: 5px;
+    transition: width 1s ease-in-out;
+  }
+  
+  /* Style for the balance label */
+  .label {
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px; /* Add some margin between balance label and progress bar */
+  }
+  
+  /* Style for the opaque frame */
+  .opaque-frame {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    border-radius: 10px;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.button {
-    width: 100%;
-    max-width: 200px;
-    height: 50px;
-    background-color: #c56900;
+    margin-top: 20px; /* Add some margin between opaque frame and balance label */
+  }
+  
+  /* Style for the second label */
+  .second-label {
+    color: #000;
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 10px; /* Add some margin between second label and opaque frame */
+  }
+  
+  /* Style for the Claim button */
+  .claim-button {
+    background-color: #ff6347;
+    color: #fff;
     border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    font-size: 16px;
     border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 10px; /* Add some margin between button and second label */
     cursor: pointer;
-    margin: 20px auto;
-}
-
-.message {
-    width: 100%;
-    max-width: 200px;
-    height: 50px;
-    background-color: #c56900;
-    color: white;
-    text-align: center;
-    line-height: 50px;
-    border-radius: 5px;
-    display: none;
-    margin: 20px auto;
-}
-
-.inscription {
-    width: 100%;
-    max-width: 200px;
-    font-size: 16px;
-    line-height: 24px;
-    white-space: nowrap;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border-radius: 20px;
-    text-align: center;
-    margin: 20px auto;
-}
-
-/* Media query for smaller screens */
-@media only screen and (max-width: 480px) {
-    .second-image {
-        margin-top: 10px;
-    }
-
-    .button,
-    .message,
-    .inscription {
-        max-width: 150px;
-    }
-}
+  }
+  
+  .claim-button:hover {
+    background-color: #ff7f50; /* Darker orange color on hover */
+  }
+  

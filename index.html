@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Centered Images with Button</title>
+<title>Progress Bar</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <div class="page-container">
-        <div class="overlay"></div>
-        <div class="container">
-            <img src="image\боня.png" alt="Sample Image" class="first-image">
-            <img src="image\надпись.png" alt="Second Image" class="second-image">
-            <button class="button" onclick="showMessage()">Claim</button>
-            <div class="message" id="successMessage">Successfully</div>
-            <div class="inscription" id="counter">BonyaCoin: 0.00</div>
-        </div>
-    </div>
+<div class="container">
+  <div class="progress-bar-container">
+    <div class="filler" id="filler" style="width: 0;"></div>
+  </div>
+  <div class="label" id="balance-label">$0.00000</div>
+  <div class="opaque-frame">
+    <div class="second-label">$0.00000</div>
+    <button class="claim-button">Claim</button>
+  </div>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
