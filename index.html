@@ -7,22 +7,6 @@
 <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-<script>
-  // Check if the user agent contains "Telegram"
-  if (navigator.userAgent.includes("Telegram")) {
-   // If the page is opened within Telegram, hide the message input field
-    document.getElementById("message-input").style.display = "none";
-    // Optionally, display a message or instruction to the user
-    alert("Please close the message input field to interact with this web application.");
-  }
-</script>
-  
-  <!-- Your web application content -->
-  <h1>Welcome to the Web Application</h1>
-  <!-- Your other content goes here -->
-  
-  <!-- Example message input field (hidden if opened within Telegram) -->
-  <input type="text" id="message-input" placeholder="Type your message...">
 <div class="container">
   <div class="progress-bar-container">
     <div class="filler" id="filler" style="width: 0;"></div>
